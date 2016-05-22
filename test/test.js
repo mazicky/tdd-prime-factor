@@ -9,5 +9,6 @@ describe ('Find Prime Factor', () => {
     findPrime(3).should.deep.equal([ 3 ])
     findPrime(4).should.deep.equal([ 2, 2 ])
     findPrime(6).should.deep.equal([ 2, 3 ])
+    findPrime(250).should.deep.equal([ 2, 5, 5, 5 ])
   })
 })
