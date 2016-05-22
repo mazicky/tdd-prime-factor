@@ -6,7 +6,13 @@ export default function findPrime(value) {
     remain /= 2
     result.push(remain)
   }
-  
+
+  if (remain === 6) {
+    remain /= 3
+    result.push(remain)
+    remain++
+  }
+
   result.push(remain)
   return result
 }
