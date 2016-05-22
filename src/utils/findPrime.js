@@ -1,3 +1,5 @@
 export default function findPrime(value) {
-  return value
+  const result = []
+  result.push(value)
+  return result
 }
