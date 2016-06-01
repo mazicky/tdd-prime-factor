@@ -3,20 +3,13 @@ export default function findPrime(value) {
   let remain = value
   let prime = 2
 
-  if (remain === 4) {
-    remain /= prime
-    result.push(prime)
+  while (remain > 1) {
+    if (remain%prime === 0) {
+      remain /= prime
+      result.push(prime)
+    } else {
+      prime++
+    }
   }
-
-  if (remain === 6) {
-    remain /= prime
-    result.push(prime)
-  }
-
-  if (remain%2 !== 0) {
-    prime++
-  }
-  
-  result.push(prime)
   return result
 }
