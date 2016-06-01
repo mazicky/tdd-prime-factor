@@ -1,18 +1,22 @@
 export default function findPrime(value) {
   const result = []
   let remain = value
+  let prime = 2
 
   if (remain === 4) {
-    remain /= 2
-    result.push(remain)
+    remain /= prime
+    result.push(prime)
   }
 
   if (remain === 6) {
-    remain /= 3
-    result.push(remain)
-    remain++
+    remain /= prime
+    result.push(prime)
   }
 
-  result.push(remain)
+  if (remain%2 !== 0) {
+    prime++
+  }
+  
+  result.push(prime)
   return result
 }
